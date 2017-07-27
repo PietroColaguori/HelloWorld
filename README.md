@@ -1,2 +1,2 @@
 # Hello GitHUb
-This is my first repository, where I'll add stuff I code
+This is my first repository, here I'll add stuff I code
