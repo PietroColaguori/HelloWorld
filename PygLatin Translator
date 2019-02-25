@@ -1,0 +1,71 @@
+# -*- coding: cp1252 -*-
+#!/usr/bin/python
+#keywords are in italian
+#v 1.0
+#space are not accepted, fix that soon
+
+import sys
+
+print('Pyg Latin')
+
+
+
+def toPyg():
+    original = raw_input("Enter text:")
+    if len(original) > 0 and original.isalpha():
+        suffisso = 'ay'
+        lettera = original[0]
+        primafase = original + lettera + suffisso
+        pyg_word = primafase[1:] 
+        print 'Result: ' + pyg_word
+        
+    else:
+        print ('Invalid Input')
+             
+
+def fromPyg():
+    original = raw_input("Enter text:")
+    if len(original)  > 0 and original.isalpha():
+         posizione_senza_suffisso = len(original) - 2
+         fase_1 = original[:posizione_senza_suffisso]
+
+         posizione_ultima_lettera = len(fase_1) - 1
+         prima_lettera = fase_1[posizione_ultima_lettera]
+         fase_2 = fase_1[:posizione_ultima_lettera]
+
+         parola_tradotta = prima_lettera + fase_2
+         print 'Result: ', parola_tradotta
+                                                     
+     
+    else:
+        print ('Invalid Input')
+    
+
+    
+             
+
+
+while True:
+                 
+    print('[1]Translate into PygLatin [2]Translate from PygLatin [0]Exit')
+    azione = raw_input("> ")
+    str(azione)
+    
+    if azione == '1':
+        toPyg()
+                
+        
+    elif azione == '2':
+        fromPyg()
+        
+
+
+    elif azione == '0':
+        sys.exit()
+  
+             
+               
+
+
+          
+             
